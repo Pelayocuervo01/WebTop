@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F8F8FF;
+}
+
+header, .container, footer {
+    padding: 20px;
+    border: 1px solid #141414;
+    background-color: #141414;
+    color: #F8F8FF;
+}
+
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    padding: 20px;
+    border: 1px solid #F8F8FF;
+    width: 35%;
+    margin: 10px;
+    background-color: #F8F8FF;
+    
+}
+.redes-sociales {
+    display: flex;
+}
+.main-content {
+    padding: 20px;
+    border: 1px solid #F8F8FF;
+    margin: 10px;
+    width: 65%;
+    background-color: #F8F8FF;
+}
+.Game {
+    margin-bottom: 24px;
+}
+
+.Game img, .img-custom {
+    max-width: 200px;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.28);
+}
+
+/* ... Tu código CSS existente ... */
+
+.games-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Game {
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.Game img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.Game-info {
+    text-align: center;
+}
+
+/* ... Resto de tu código CSS ... */
+
+
+.img-custom img {
+    width: 100%;
+}
+
+.Game-info {
+    padding-left: 60px;
+}
+
+.Game img,
+.img-custom img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.Game img:hover,
+.img-custom img:hover {
+    transform: scale(1.1);
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+#comments {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.social-img a {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-img a:hover {
+    transform: scale(1.1);
+}
+.social-img {
+    width: 50px;   
+    height: 50px;
+    padding-right: 100px;
+}
+.mini-img {
+    object-fit: cover;
+}
+
+/* ... Tu código CSS existente ... */
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .redes-sociales {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .Game {
+        width: 100%;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .games-section {
+        justify-content: space-around;
+    }
+
+    .Game {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media screen and (min-width: 901px) {
+    .games-section {
+        justify-content: space-between;
+    }
+
+    .Game {
+        width: calc(30% - 20px);
+    }
+}

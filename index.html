@@ -1,0 +1,129 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Top VideoGames</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Top VideoGames</h1>
+        </header>
+        <div class="content">
+            <main class="main-content">
+                <h2>Recomendaciones de videojuegos</h2>
+                <p></p>
+        
+                <section class="games-section">
+                    <div class="Game">
+                        <div class="img-custom">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg" alt="The Legend of Zelda: Breath of the Wild">
+                        </div>
+        
+                        <div class="Game-info">
+                            <h3>The Legend of Zelda: Breath of the Wild</h3>
+                            <p class="sinopsis">Step into a world of discovery, exploration and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series.</p>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="Game">
+                        <div class="img-custom">
+                            <img src="https://www.metacritic.com/a/img/catalog/provider/6/12/6-1-624965-52.jpg" alt="Super Mario Odyssey">
+                        </div>
+        
+                        <div class="Game-info">
+                            <h3>Super Mario Odyssey</h3>
+                            <p class="sinopsis">Mario embarks on a new journey through unknown worlds, running and jumping through 3D environments in a sandbox-style game.</p>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="Game">
+                        <div class="img-custom">
+                            <img src="https://ztgd.com/wp-content/uploads/2023/08/baldursgate3_box.png" alt="Baldur's Gate 3">
+                        </div>
+        
+                        <div class="Game-info">
+                            <h3>Baldur's Gate 3</h3>
+                            <p class="sinopsis">Baldur's Gate III is the official third adventure in the venerable Baldur's Gate role-playing series. Adventure, loot, battle and romance as you journey through the Forgotten Realms and beyond. Play alone, and select your companions carefully, or as a party of up to four in multiplayer.</p>
+                            
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="marketing-section">
+                    <div class="banner">
+                        <h4>Descubre mundos extraordinarios, vive aventuras épicas y despierta tu héroe interior con nuestras recomendaciones de videojuegos. El siguiente nivel de entretenimiento te espera. ¿Estás listo para jugar?</h4>
+                    </div>
+                </section>
+                
+            </main>
+            <aside class="sidebar">
+                <h2>¡Comparte tus comentarios en redes!</h2>
+                <p></p>
+                <div class="redes-sociales">
+                    
+                    <div class="social-img">
+                        <a href="https://twitter.com/?lang=es" target="_blank">
+                            <img class="social-img mini-img" src="https://static.vecteezy.com/system/resources/thumbnails/027/395/710/small/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.png" alt="Twitter">
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="social-img" target="_blank">
+                        <a href="https://www.facebook.com/?locale=es_LA">
+                            <img class="social-img mini-img" src="https://cdn-icons-png.flaticon.com/512/3670/3670144.png" alt="Facebook">
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="social-img" target="_blank">
+                        <a href="https://www.instagram.com">
+                            <img class="social-img mini-img" src="https://i0.wp.com/bodybeyondlimits.com.au/wp-content/uploads/2022/07/instagram-circle-icon-png-4.png?ssl=1" alt="Instagram">
+                        </a>
+                    </div>
+                
+                </div>
+
+                <div class="comments-section">
+                    <h2>Comentarios</h2>
+                    <ul id="comments"></ul>
+                    
+                    <form id="commentForm">
+                        <input type="text" id="usernameInput" placeholder="Tu nombre de usuario">
+                        <textarea id="commentInput" placeholder="Escribe tu comentario"></textarea>
+                        <button type="button" onclick="addComment()">Comentar</button>
+                    </form>
+                </div>
+                
+            </aside>
+    
+        </div>
+        
+        <footer>
+            <p>Derechos de autor © 2024 - Top VideoGames</p>
+            <p>topvideojuegos@gmail.com</p>
+        </footer>
+        <script>
+            function addComment() {
+                var usernameInput = document.getElementById('usernameInput');
+                var commentInput = document.getElementById('commentInput');
+                var username = usernameInput.value.trim();
+                var commentText = commentInput.value.trim();
+    
+                if (username !== '' && commentText !== '') {
+                    var commentsList = document.getElementById('comments');
+                    var newComment = document.createElement('li');
+                    newComment.className = 'comment';
+                    newComment.innerHTML = '<p><strong>' + username + ':</strong> ' + commentText + '</p>';
+                    commentsList.appendChild(newComment);
+    
+                    usernameInput.value = '';
+                    commentInput.value = '';
+                }
+            }
+            
+        </script>
+    </body>
+</html>
